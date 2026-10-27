@@ -170,4 +170,4 @@ Overall, future improvements include:
 - [ ] Broadening the dataset and diversifying it (including images without any fish)
 - [ ] Creating a robust, separate test set
 
-With these, we can improve training configurations to make the model more robust and perform better.
+With these, I can improve training configurations to make the model more robust and perform better.
