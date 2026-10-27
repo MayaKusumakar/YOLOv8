@@ -107,7 +107,7 @@ The successful run is saved under **`runs/clownfish_150epochs`**.
   <img src="https://github.com/user-attachments/assets/e2d195b3-1e51-4730-8156-62fe608871c9" alt="Confusion matrix for the validation set" width="640">
 </p>
 
-*Figure 1. Validation confusion matrix: 4 correct detections, 1 false positive (background predicted as clownfish) and 0 missed clownfish.*
+*Figure 1. Validation confusion matrix: 4 correct detections, 1 false positive and 0 missed clownfish.*
 
 ### Precision–recall curve
 
@@ -115,7 +115,7 @@ The successful run is saved under **`runs/clownfish_150epochs`**.
   <img src="https://github.com/user-attachments/assets/e92891c9-1841-4fe0-a517-c11eda9a7d0a" alt="Precision-recall curve" width="640">
 </p>
 
-*Figure 2. Precision–recall curve for the clownfish class, giving mAP@0.5 = 0.945.*
+*Figure 2. Precision–recall curve for the clownfish class.*
 
 ### F1–confidence curve
 
@@ -129,10 +129,10 @@ The successful run is saved under **`runs/clownfish_150epochs`**.
 
 
 <p align="center">
-  <img src="[figures/training_curves.png](https://github.com/user-attachments/assets/601fedad-4e14-4490-a91c-f045dcdd2da4)" alt="Training and validation losses and metrics per epoch" width="900">
+  <img src="https://github.com/user-attachments/assets/601fedad-4e14-4490-a91c-f045dcdd2da4" alt="Training and validation losses and metrics per epoch" width="900">
 </p>
 
-*Figure 4. Per-epoch training and validation losses and validation metrics for Run 3. Validation mAP peaks within the first few epochs and then declines while validation loss rises. With patience 30, stopping at epoch 33 means the best checkpoint came from around epoch 3.*
+*Figure 4. Per-epoch training and validation losses and validation metrics for Run 3.*
 
 ### Sample predictions
 
@@ -142,8 +142,8 @@ The successful run is saved under **`runs/clownfish_150epochs`**.
     <th>Unseen test image</th>
   </tr>
   <tr>
-    <td align="center"><img src="[figures/validation_predictions.jpg](https://github.com/user-attachments/assets/8299eb9d-e51c-4fe5-9e9a-af01c4bc156f)" alt="Predictions on the four validation images" width="240"></td>
-    <td align="center"><img src="[figures/test_image_prediction.jpg](https://github.com/user-attachments/assets/bff3dc85-4790-48ee-b944-eb18fc916999)" alt="Prediction on an unseen test image" width="480"></td>
+    <td align="center"><img src="https://github.com/user-attachments/assets/8299eb9d-e51c-4fe5-9e9a-af01c4bc156f" alt="Predictions on the four validation images" width="240"></td>
+    <td align="center"><img src="https://github.com/user-attachments/assets/bff3dc85-4790-48ee-b944-eb18fc916999" alt="Prediction on an unseen test image" width="480"></td>
   </tr>
 </table>
 
@@ -158,8 +158,8 @@ Fine-tuning the model on a new dataset did indeed expand the model's detection a
 ### Limitations
 
 - **Small dataset.** The biggest limitation of this model and the performance metrics results is the small dataset size. There are only 14 images used for training and only 4 images used for validation. This small dataset cannot represent all different images of clownfish (different backgrounds, positions, lighting, quality, etc.).
-- **Metrics are sensitive to single images.** The confusion matrix showed 4 correct detections, one false positive, and no missed fish. These results seem very good, but because of the small dataset size, each image has a very large impact on each metric. For example, that one false positive alone takes precision from 1.00 down to 0.80.
-- **No independent test set.** The model was also tested on one unseen test image, but the metrics were grabbed from the validation set, which was used during training for early stopping and choosing the best checkpoint. A larger, more diverse test set would be needed for an unbiased, realistic evaluation.
+- **Each image affects metrics heavily.** The confusion matrix showed 4 correct detections, one false positive, and no missed fish. These results seem very good at surface level, but because of the small dataset size, each image has a very large impact on each metric. For example, the one false positive changes precision from 1.00 to 0.80.
+- **No independent test set.** The model was also tested on one unseen test image, but the metrics were calculated from the validation set. A larger, more diverse test set would be needed for an unbiased, realistic evaluation.
 - **No negative examples.** Every image in the validation set has at least one clownfish, so it didn't properly evaluate the model on negative detections.
 
 ### Future plans
