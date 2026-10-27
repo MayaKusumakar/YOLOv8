@@ -104,7 +104,7 @@ The successful run is saved under **`runs/clownfish_150epochs`**.
 ### Confusion matrix
 
 <p align="center">
-  <img src="figures/confusion_matrix.png" alt="Confusion matrix for the validation set" width="640">
+  <img src="https://github.com/user-attachments/assets/e2d195b3-1e51-4730-8156-62fe608871c9" alt="Confusion matrix for the validation set" width="640">
 </p>
 
 *Figure 1. Validation confusion matrix: 4 correct detections, 1 false positive (background predicted as clownfish) and 0 missed clownfish.*
@@ -112,7 +112,7 @@ The successful run is saved under **`runs/clownfish_150epochs`**.
 ### Precision–recall curve
 
 <p align="center">
-  <img src="figures/precision_recall_curve.png" alt="Precision-recall curve" width="640">
+  <img src="https://github.com/user-attachments/assets/e92891c9-1841-4fe0-a517-c11eda9a7d0a" alt="Precision-recall curve" width="640">
 </p>
 
 *Figure 2. Precision–recall curve for the clownfish class, giving mAP@0.5 = 0.945.*
@@ -120,15 +120,16 @@ The successful run is saved under **`runs/clownfish_150epochs`**.
 ### F1–confidence curve
 
 <p align="center">
-  <img src="figures/f1_confidence_curve.png" alt="F1-confidence curve" width="640">
+  <img src="https://github.com/user-attachments/assets/56ceebbc-c338-438a-b92b-b1df67870b0b" alt="F1-confidence curve" width="640">
 </p>
 
 *Figure 3. F1 score against confidence threshold. F1 stays at its maximum of 0.89 for thresholds up to about 0.5 and falls to 0 above about 0.84.*
 
 ### Training curves
 
+
 <p align="center">
-  <img src="figures/training_curves.png" alt="Training and validation losses and metrics per epoch" width="900">
+  <img src="[figures/training_curves.png](https://github.com/user-attachments/assets/601fedad-4e14-4490-a91c-f045dcdd2da4)" alt="Training and validation losses and metrics per epoch" width="900">
 </p>
 
 *Figure 4. Per-epoch training and validation losses and validation metrics for Run 3. Validation mAP peaks within the first few epochs and then declines while validation loss rises. With patience 30, stopping at epoch 33 means the best checkpoint came from around epoch 3.*
@@ -141,8 +142,8 @@ The successful run is saved under **`runs/clownfish_150epochs`**.
     <th>Unseen test image</th>
   </tr>
   <tr>
-    <td align="center"><img src="figures/validation_predictions.jpg" alt="Predictions on the four validation images" width="240"></td>
-    <td align="center"><img src="figures/test_image_prediction.jpg" alt="Prediction on an unseen test image" width="480"></td>
+    <td align="center"><img src="[figures/validation_predictions.jpg](https://github.com/user-attachments/assets/8299eb9d-e51c-4fe5-9e9a-af01c4bc156f)" alt="Predictions on the four validation images" width="240"></td>
+    <td align="center"><img src="[figures/test_image_prediction.jpg](https://github.com/user-attachments/assets/bff3dc85-4790-48ee-b944-eb18fc916999)" alt="Prediction on an unseen test image" width="480"></td>
   </tr>
 </table>
 
